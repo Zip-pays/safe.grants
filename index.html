@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Heritage Grant Foundation — 2026 Funding Opportunity</title>
+<meta name="description" content="Apply for the 2026 Heritage Grant Program. Non-repayable funding of $15,000–$150,000 for individuals, entrepreneurs, and community projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf8f1;--ink:#0f2a20;--emerald:#0f3a2e;--emerald-2:#0a2820;
+    --gold:#d4a94a;--gold-2:#b8862c;--muted:#6b7a72;--border:#e4dfd0;--card:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;letter-spacing:-.02em;font-weight:600;line-height:1.05}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .container{max-width:1120px;margin:0 auto;padding:0 24px}
+  .gold-text{background:linear-gradient(135deg,#e6c063,#a97a1e,#e6c063);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .2s, background .2s;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--emerald);color:var(--cream);box-shadow:0 20px 50px -20px rgba(15,58,46,.5)}
+  .btn-outline{background:var(--card);color:var(--ink);border:1px solid var(--border)}
+  .btn-gold{background:linear-gradient(135deg,#e6c063,#a97a1e);color:#2b1f05;box-shadow:0 20px 50px -20px rgba(212,169,74,.6)}
+  .btn-sm{padding:8px 16px;font-size:12px}
+
+  /* Nav */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(250,248,241,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1120px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:18px;font-weight:600}
+  .logo-mark{width:32px;height:32px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px}
+  .nav-links{display:flex;gap:32px}
+  .nav-links a{font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  @media(max-width:768px){.nav-links{display:none}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:80px 0}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media(min-width:900px){.hero-grid{grid-template-columns:7fr 5fr;padding:64px 0}}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid var(--border);background:var(--card);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .pill .dot{width:6px;height:6px;background:var(--gold);border-radius:999px}
+  h1.title{font-size:clamp(40px,7vw,76px);margin-top:24px}
+  h1.title em{font-style:italic;font-weight:600}
+  .lede{margin-top:24px;font-size:18px;color:var(--muted);max-width:560px}
+  .lede strong{color:var(--ink)}
+  .cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+  .badges{margin-top:32px;display:flex;flex-wrap:wrap;gap:24px;font-size:12px;color:var(--muted)}
+  .badges span{display:inline-flex;align-items:center;gap:6px}
+  .badges .check{color:var(--gold-2);font-weight:700}
+  .hero-card{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(15,42,32,.4);aspect-ratio:4/5;background:linear-gradient(135deg,#0f3a2e,#0a2820)}
+  .hero-card .frame{position:absolute;inset:24px;border:1px solid rgba(212,169,74,.3);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;color:#faf8f1}
+  .hero-card .seal{width:64px;height:64px;border-radius:999px;background:radial-gradient(circle at 30% 30%,#e6c063,#8a5f1d);align-self:flex-end;box-shadow:0 10px 30px -10px rgba(212,169,74,.6)}
+  .hero-card .cert-title{font-family:'Fraunces',serif;font-size:32px;letter-spacing:.05em;text-align:center;margin-top:auto}
+  .hero-card .stat{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px);border-radius:12px;padding:16px;margin-top:24px}
+  .hero-card .stat-row{display:flex;justify-content:space-between;align-items:baseline}
+  .hero-card .stat-amt{font-family:'Fraunces',serif;font-size:28px}
+  .hero-card .stat-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.15em;opacity:.7}
+  .bar{margin-top:10px;height:4px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}
+  .bar>span{display:block;width:74%;height:100%;background:linear-gradient(135deg,#e6c063,#a97a1e)}
+  .bar-lbl{margin-top:6px;display:flex;justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.15em;opacity:.6}
+
+  /* Stats strip */
+  .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(228,223,208,.35)}
+  .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;padding:48px 24px;max-width:1120px;margin:0 auto}
+  @media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+  .stat-num{font-family:'Fraunces',serif;font-size:40px;color:var(--emerald)}
+  .stat-lbl2{margin-top:4px;font-size:14px;color:var(--muted)}
+
+  /* Section */
+  section.pad{padding:96px 0}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  h2.section-title{margin-top:8px;font-size:clamp(32px,5vw,52px);max-width:640px}
+
+  /* Tiers */
+  .tiers{display:grid;grid-template-columns:1fr;gap:24px;margin-top:48px}
+  @media(min-width:900px){.tiers{grid-template-columns:repeat(3,1fr)}}
+  .tier{position:relative;border:1px solid var(--border);border-radius:20px;padding:32px;background:var(--card);transition:transform .2s}
+  .tier:hover{transform:translateY(-4px)}
+  .tier.featured{background:linear-gradient(135deg,#0f3a2e,#0a2820);color:#faf8f1;border-color:transparent;box-shadow:0 30px 80px -30px rgba(15,42,32,.4)}
+  .tier-badge{position:absolute;top:-12px;left:32px;background:linear-gradient(135deg,#e6c063,#a97a1e);color:#2b1f05;padding:4px 12px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+  .tier-tag{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+  .tier.featured .tier-tag{color:rgba(255,255,255,.6)}
+  .tier-name{margin-top:12px;font-family:'Fraunces',serif;font-size:22px}
+  .tier-amt{margin-top:16px;font-family:'Fraunces',serif;font-size:56px;color:var(--emerald)}
+  .tier.featured .tier-amt{background:linear-gradient(135deg,#e6c063,#a97a1e);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tier-sub{margin-top:6px;font-size:12px;color:var(--muted)}
+  .tier.featured .tier-sub{color:rgba(255,255,255,.6)}
+  .tier ul{margin-top:32px;list-style:none;display:flex;flex-direction:column;gap:12px}
+  .tier li{display:flex;gap:8px;font-size:14px}
+  .tier li::before{content:"✓";color:var(--gold-2);font-weight:700;flex-shrink:0}
+  .tier.featured li::before{color:var(--gold)}
+  .tier .btn{margin-top:32px;width:100%;justify-content:center}
+  .tier:not(.featured) .btn{background:transparent;border:1px solid var(--border);color:var(--ink)}
+  .tier:not(.featured) .btn:hover{background:var(--cream)}
+
+  /* Process */
+  .process{background:linear-gradient(135deg,#0f3a2e,#0a2820);color:#faf8f1;padding:96px 0}
+  .process .eyebrow{color:var(--gold)}
+  .steps{display:grid;grid-template-columns:1fr;gap:32px;margin-top:56px}
+  @media(min-width:768px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .step{border-top:1px solid rgba(255,255,255,.15);padding-top:24px}
+  .step-num{font-family:'Fraunces',serif;font-size:30px;background:linear-gradient(135deg,#e6c063,#a97a1e);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .step-t{margin-top:12px;font-family:'Fraunces',serif;font-size:20px}
+  .step-d{margin-top:8px;font-size:14px;color:rgba(255,255,255,.7)}
+
+  /* Eligibility */
+  .elig-grid{display:grid;grid-template-columns:1fr;gap:48px}
+  @media(min-width:900px){.elig-grid{grid-template-columns:1fr 1fr}}
+  .elig-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .elig-list li{list-style:none;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;font-size:14px;display:flex;gap:8px}
+  .elig-list li::before{content:"✓";color:var(--gold-2);font-weight:700}
+  .elig-info{margin-top:32px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;gap:12px}
+  .elig-info .shield{color:var(--emerald);font-size:20px}
+  .elig-info h4{font-family:'Inter',sans-serif;font-size:14px;font-weight:600}
+  .elig-info p{margin-top:4px;font-size:13px;color:var(--muted)}
+
+  /* Testimonials */
+  .test-wrap{background:rgba(228,223,208,.35)}
+  .test-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:48px}
+  @media(min-width:900px){.test-grid{grid-template-columns:repeat(3,1fr)}}
+  .quote{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px}
+  .quote .mark{font-family:'Fraunces',serif;font-size:40px;color:var(--gold);line-height:1}
+  .quote blockquote{margin-top:8px;font-size:14px}
+  .quote figcaption{margin-top:24px;font-size:12px}
+  .quote figcaption strong{display:block}
+  .quote figcaption span{color:var(--muted)}
+
+  /* FAQ */
+  .faq-wrap{max-width:720px;margin:0 auto}
+  .faq{margin-top:40px;border:1px solid var(--border);border-radius:20px;background:var(--card);overflow:hidden}
+  details{padding:20px 24px;border-bottom:1px solid var(--border)}
+  details:last-child{border-bottom:none}
+  summary{display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;list-style:none;font-family:'Fraunces',serif;font-size:18px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--gold-2);font-size:24px;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin-top:12px;font-size:14px;color:var(--muted)}
+
+  /* Contact */
+  .contact{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f3a2e,#0a2820);color:#faf8f1;border-radius:24px;padding:48px;box-shadow:0 30px 80px -30px rgba(15,42,32,.4)}
+  @media(min-width:768px){.contact{padding:64px}}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+  @media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .contact .eyebrow{color:var(--gold)}
+  .contact h2{margin-top:8px;font-size:clamp(30px,4vw,44px)}
+  .contact p{margin-top:16px;color:rgba(255,255,255,.7);max-width:400px}
+  .contact-cards{display:flex;flex-direction:column;gap:16px}
+  .contact-card{display:flex;align-items:center;justify-content:space-between;padding:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;backdrop-filter:blur(8px);transition:transform .2s, background .2s}
+  .contact-card:hover{transform:translateY(-2px);background:rgba(255,255,255,.1)}
+  .contact-card .left{display:flex;align-items:center;gap:16px}
+  .contact-card .icon{width:48px;height:48px;border-radius:999px;background:linear-gradient(135deg,#e6c063,#a97a1e);color:#2b1f05;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;box-shadow:0 20px 50px -20px rgba(212,169,74,.6)}
+  .contact-card .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:rgba(255,255,255,.6)}
+  .contact-card .val{font-family:'Fraunces',serif;font-size:18px;margin-top:2px}
+  .contact-card .arrow{font-size:20px;transition:transform .2s}
+  .contact-card:hover .arrow{transform:translateX(4px)}
+
+  /* Footer */
+  footer{border-top:1px solid var(--border);margin-top:48px}
+  .foot{display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:space-between;padding:32px 24px;font-size:12px;color:var(--muted);max-width:1120px;margin:0 auto}
+  @media(min-width:768px){.foot{flex-direction:row}}
+  .foot-links{display:flex;gap:24px}
+  .foot-links a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <div class="logo-mark gold-text">H</div>
+      <span>Heritage Grant</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#tiers">Awards</a>
+      <a href="#process">Process</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">Apply Now →</a>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="pill"><span class="dot"></span> 2026 Funding Cycle · Now Open</div>
+      <h1 class="title">Non-repayable <em class="gold-text">grants</em> for the people building what's next.</h1>
+      <p class="lede">The Heritage Grant Program awards between <strong>$15,000 and $150,000</strong> to individuals, entrepreneurs, students, and community initiatives — with no repayment, ever.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer" class="btn btn-primary">💬 Start Application on WhatsApp →</a>
+        <a href="https://t.me/customer_assist01" target="_blank" rel="noreferrer" class="btn btn-outline">✈ Message on Telegram</a>
+      </div>
+      <div class="badges">
+        <span><span class="check">✓</span> Verified sponsors</span>
+        <span><span class="check">✓</span> No repayment</span>
+        <span><span class="check">✓</span> 72-hour review</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="frame">
+        <div class="seal"></div>
+        <div class="cert-title gold-text">GRANT<br>CERTIFICATE</div>
+        <div class="stat">
+          <div class="stat-row">
+            <div class="stat-amt gold-text">$150,000</div>
+            <div class="stat-lbl">Top award</div>
+          </div>
+          <div class="bar"><span></span></div>
+          <div class="bar-lbl"><span>Applications filling</span><span>74%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-grid">
+    <div><div class="stat-num">$42M+</div><div class="stat-lbl2">Awarded to date</div></div>
+    <div><div class="stat-num">3,800+</div><div class="stat-lbl2">Beneficiaries</div></div>
+    <div><div class="stat-num">72h</div><div class="stat-lbl2">Avg. review time</div></div>
+    <div><div class="stat-num">41</div><div class="stat-lbl2">Countries served</div></div>
+  </div>
+</section>
+
+<section id="tiers" class="pad">
+  <div class="container">
+    <div class="eyebrow">Awards</div>
+    <h2 class="section-title">Three tiers. One purpose — remove the financial barrier.</h2>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-tag">Individuals & Students</div>
+        <div class="tier-name">Seed Grant</div>
+        <div class="tier-amt">$15,000</div>
+        <div class="tier-sub">Non-repayable · Tax-exempt</div>
+        <ul><li>Debt relief</li><li>Tuition & books</li><li>Personal essentials</li></ul>
+        <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer" class="btn">Apply for Seed →</a>
+      </div>
+      <div class="tier featured">
+        <div class="tier-badge">Most Awarded</div>
+        <div class="tier-tag">Entrepreneurs</div>
+        <div class="tier-name">Builder Grant</div>
+        <div class="tier-amt">$50,000</div>
+        <div class="tier-sub">Non-repayable · Tax-exempt</div>
+        <ul><li>Small business capital</li><li>Equipment purchase</li><li>Working funds</li></ul>
+        <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer" class="btn btn-gold">Apply for Builder →</a>
+      </div>
+      <div class="tier">
+        <div class="tier-tag">Community & Impact</div>
+        <div class="tier-name">Heritage Grant</div>
+        <div class="tier-amt">$150,000</div>
+        <div class="tier-sub">Non-repayable · Tax-exempt</div>
+        <ul><li>Non-profit programs</li><li>Housing initiatives</li><li>Extended mentorship</li></ul>
+        <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer" class="btn">Apply for Heritage →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="container">
+    <div class="eyebrow">The Process</div>
+    <h2 class="section-title" style="color:#faf8f1">From application to disbursement in four steps.</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div class="step-t">Reach out</div><div class="step-d">Contact our official desk on WhatsApp or Telegram. A grant officer replies within minutes.</div></div>
+      <div class="step"><div class="step-num">02</div><div class="step-t">Verify eligibility</div><div class="step-d">Confirm identity, purpose of funds, and preferred disbursement method. No credit check.</div></div>
+      <div class="step"><div class="step-num">03</div><div class="step-t">Review & approval</div><div class="step-d">Your file is presented to the awards committee. Decisions typically arrive within 72 hours.</div></div>
+      <div class="step"><div class="step-num">04</div><div class="step-t">Receive funds</div><div class="step-d">Approved awards are disbursed by wire, ACH, or digital transfer — free of any repayment obligation.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="eligibility" class="pad">
+  <div class="container elig-grid">
+    <div>
+      <div class="eyebrow">Eligibility</div>
+      <h2 class="section-title">Built to be reachable.</h2>
+      <p class="lede">The Heritage Grant Program is designed to be inclusive. There are no credit requirements, no collateral, and no age ceiling. Every serious applicant is reviewed on merit and need.</p>
+      <div class="elig-info">
+        <div class="shield">🛡</div>
+        <div><h4>Verified & confidential</h4><p>All communications happen on our official WhatsApp and Telegram channels. Your information is never sold or shared.</p></div>
+      </div>
+    </div>
+    <ul class="elig-list">
+      <li>Adults 18+ worldwide</li>
+      <li>Students & graduates</li>
+      <li>Small business owners</li>
+      <li>Non-profits & community leaders</li>
+      <li>Single parents & caregivers</li>
+      <li>Veterans & retirees</li>
+    </ul>
+  </div>
+</section>
+
+<section class="test-wrap pad">
+  <div class="container">
+    <div class="eyebrow">Recipients</div>
+    <h2 class="section-title">Stories from the 2025 cycle.</h2>
+    <div class="test-grid">
+      <figure class="quote">
+        <div class="mark">"</div>
+        <blockquote>I used my $50,000 to reopen my bakery after the fire. The process was fast and completely transparent.</blockquote>
+        <figcaption><strong>Amara O.</strong><span>Small business owner, TX</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="mark">"</div>
+        <blockquote>The Seed grant cleared my tuition balance. No repayment, no strings — I still can't believe it.</blockquote>
+        <figcaption><strong>David L.</strong><span>Graduate student, ON</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="mark">"</div>
+        <blockquote>Our shelter received the Heritage award. It funded a full year of operations for 40 families.</blockquote>
+        <figcaption><strong>Rev. Patrice K.</strong><span>Community leader, GA</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="pad">
+  <div class="container faq-wrap">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="section-title">Questions, answered.</h2>
+    <div class="faq">
+      <details><summary>Is this really non-repayable?</summary><p>Yes. Grants are gifts. Recipients never repay the amount awarded and are not required to pay interest, dividends, or fees on the award.</p></details>
+      <details><summary>Are there any upfront fees?</summary><p>No fees are charged to receive a grant. Our grant officers will never ask for gift cards, crypto, or wire transfers as a condition of approval.</p></details>
+      <details><summary>How long does it take?</summary><p>Most decisions are issued within 72 hours of a completed application. Disbursement follows within 24–48 hours of approval.</p></details>
+      <details><summary>Which countries are eligible?</summary><p>The 2026 cycle accepts applicants in North America, Europe, the UK, Australia, and select countries in Africa and the Caribbean.</p></details>
+      <details><summary>How do I confirm I'm speaking with an official officer?</summary><p>Only the two channels listed on this page — WhatsApp +1 (782) 809-4033 and Telegram @customer_assist01 — are official. Any other channel is not affiliated with Heritage Grant.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom:96px">
+  <div class="contact">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow">Official Support</div>
+        <h2>Speak to a grant officer today.</h2>
+        <p>Reach us on either official channel below. Our team responds in minutes, day or night, in the 2026 cycle.</p>
+      </div>
+      <div class="contact-cards">
+        <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer" class="contact-card">
+          <div class="left">
+            <div class="icon">💬</div>
+            <div><div class="lbl">WhatsApp</div><div class="val">+1 (782) 809-4033</div></div>
+          </div>
+          <div class="arrow">→</div>
+        </a>
+        <a href="https://t.me/customer_assist01" target="_blank" rel="noreferrer" class="contact-card">
+          <div class="left">
+            <div class="icon">✈</div>
+            <div><div class="lbl">Telegram</div><div class="val">@customer_assist01</div></div>
+          </div>
+          <div class="arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <div>© 2026 Heritage Grant Foundation. All rights reserved.</div>
+    <div class="foot-links">
+      <a href="https://wa.me/17828094033" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a href="https://t.me/customer_assist01" target="_blank" rel="noreferrer">Telegram</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
